@@ -27,13 +27,13 @@ A **multithreaded client-server chat application** built using **Java Sockets** 
 ## 📁 Project Structure
 
 MultithreadedChatApp/
-├── server/
-│ ├── Server.java
-│ └── ClientHandler.java
-├── client/
-│ ├── ChatClient.java
-│ └── ChatFrame.java
-└── README.md
+-├── server/
+-│ ├── Server.java
+-│ └── ClientHandler.java
+-├── client/
+-│ ├── ChatClient.java
+-│ └── ChatFrame.java
+-└── README.md
 
 ---
 
