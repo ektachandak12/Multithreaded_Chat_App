@@ -1,26 +1,20 @@
-# 🗨️ Multithreaded Chat Application (Java + Swing)
+# 💬 Java Multithreaded Chat Application (Swing GUI + Login/Registration)
 
-A **multithreaded client-server chat application** built using **Java Sockets** and **Swing GUI**. This app supports multiple clients communicating in real-time, with login and registration features, and individual chat windows per user.
-
----
-
-## 💡 Features
-
-- 🔒 **Login and Registration** system
-- 💬 **Real-time group chat** using sockets
-- 🧵 **Multithreading** on the server to handle multiple clients simultaneously
-- 🖥️ **Swing-based GUI** for an interactive chat interface
-- 🔔 **System messages** (e.g., user joined/left notifications)
-- ❌ Graceful client disconnection without affecting other users
+This is a Java-based multithreaded chat application using **Swing GUI** for the client side. It supports:
+- Multiple clients connecting to a server
+- Real-time messaging
+- User login and registration system
+- Message broadcasting to all clients
 
 ---
 
-## 🏗️ Technologies Used
+## 🚀 Features
 
-- Java SE
-- Java Swing (GUI)
-- Java Socket Programming
-- Multithreading (via `Thread` and `Runnable`)
+- Multithreaded chat server using sockets
+- Swing-based GUI for chat and login/register
+- Message broadcast to all connected users
+- Basic authentication with file-based storage (`users.txt`)
+- Displays join/leave notifications
 
 ---
 
@@ -34,48 +28,76 @@ MultithreadedChatApp/
 │ ├── LoginFrame.java
 │ ├── ChatFrame.java
 │ └── ChatClient.java
-├── users.txt 
+├── users.txt # Stores registered users (username:password)
 └── README.md
 
 ---
 
-## 🚀 How to Run
+## 🧪 Sample Output
 
-### 🖥️ Start the Server
-```bash
-javac server/*.java
+### ✅ Terminal (Server Side)
+
+Server started...
+New client connected.
+User ekta registered.
+[ ekta joined the chat ]
+User rahul registered.
+[ rahul joined the chat ]
+
+
+
+### ✅ Client Chat Window
+
+[ ekta joined the chat ]
+[ rahul joined the chat ]
+rahul: Hi Ekta!
+ekta: Hello Rahul!
+
+---
+
+## 🛠️ Requirements
+
+- Java 8 or above
+- An IDE like IntelliJ or Eclipse (optional)
+- No external libraries required
+
+---
+
+## 🏁 How to Run
+
+### 1. Compile
+javac server/.java client/.java
+
+
+### 2. Run Server
 java server.Server
-```
 
-## 👥 Start Multiple Clients
 
-```bash
-javac client/*.java
+### 3. Run Client(s)
 java client.ChatClient
-```
 
-Each client window will prompt for login or registration, and open a chat GUI upon successful authentication.
 
-## 📸 Sample Output
+> ✅ Open multiple clients to simulate a real chat!
 
-[ Ekta joined the chat ]
-[ Rahul joined the chat ]
-Ekta: Hello!
-Rahul: Hi Ekta!
 
-## 🛠️ To-Do / Future Enhancements
-🗃️ Store registered users in a database (e.g., MySQL)
+---
 
-⏰ Add timestamps to messages
+## 📌 Notes
 
-📬 Implement private messaging (DMs)
+- All users are stored in `users.txt` in the format `username:password`.
+- Messages are broadcast to all connected users except the sender.
+- Chat frame displays live messages, join/leave notices.
+- Uses Java's `Socket`, `ServerSocket`, and `Swing`.
 
-🌐 Add deployment support for running over a network/internet
+---
 
-## 📚 License
-This project is open-source and free to use for learning and educational purposes.
+## 👤 Author
 
-## 🙋‍♀️ Author
-Ekta Naresh Chandak
-📧 [ektachandak.edu@gmail.com]
+**Ekta Naresh Chandak**  
+B.Tech | Artificial Intelligence & Data Science  
 
+---
+
+## 📃 License
+
+This project is for educational/demo purposes. Feel free to use and modify.
